@@ -1,0 +1,149 @@
+! AdGuard Home Microsoft DNS rules - ALL SERVICES / UNSAFE
+! Date: 2026-11-15
+! Source: Microsoft Windows 11 connection endpoints + Microsoft Edge endpoints
+! Format: ||domain^ blocks domain and all subdomains; comments are ignored.
+! IMPORTANT: do not load all lists unless you intentionally want the listed breakages.
+! This list is curated, not an exhaustive or dynamically updated Microsoft endpoint feed.
+
+! ===== 01-recommended.txt =====
+
+! News, Widgets, Windows Spotlight, weather and Microsoft Start
+||msn.com^
+||ris.api.iris.microsoft.com^
+||fd.api.iris.microsoft.com^
+||widgetcdn.azureedge.net^
+||widgetservice.azurefd.net^
+||prod-azurecdn-akamai-iris.azureedge.net^
+||fp-afd-nocache-ccp.azureedge.net^
+||edgeassetservice.azureedge.net^
+||tile-service.weather.microsoft.com^
+||c-ring.msedge.net^
+||fp.msedge.net^
+||i-ring.msedge.net^
+||s-ring.msedge.net^
+||dual-s-ring.msedge.net^
+||k-ring.msedge.net^
+||b-ring.msedge.net^
+||a-ring-fallback.msedge.net^
+
+! Windows/Office/Edge telemetry and error reports
+||events.data.microsoft.com^
+||v10.vortex-win.data.microsoft.com^
+||pipe.aria.microsoft.com^
+||telecommand.telemetry.microsoft.com^
+||watson.telemetry.microsoft.com^
+||www.telecommandsvc.microsoft.com^
+||api.diagnostics.office.com^
+||api.msa.diagnostics.office.com^
+||edge.nelreports.net^
+||ecs.nel.measure.office.net^
+||tfl.nel.measure.office.net^
+
+! ===== 02-optional-services.txt =====
+
+! Bing search suggestions, images, redirects, ad assets - may break Bing and Edge new tab
+||business.bing.com^
+||c.bing.com^
+||r.bing.com^
+||th.bing.com^
+||creativecdn.com^
+||edgeservices.bing.com^
+
+! Edge personalization/configuration, Windows activity, app configuration and metadata
+||config.edge.skype.com^
+||activity.windows.com^
+||dmd.metaservices.microsoft.com^
+||evoke-windowsservices-tas.msedge.net^
+||iecvlist.microsoft.com^
+||settings-win.data.microsoft.com^
+||settings.data.microsoft.com^
+||fs.microsoft.com^
+||inference.location.live.net^
+
+! Microsoft Store app content and metadata - Store may stop installing/updating apps
+||img-prod-cms-rt-microsoft-com.akamaized.net^
+||img-s-msn-com.akamaized.net^
+||store-images.s-microsoft.com^
+||livetileedge.dsx.mp.microsoft.com^
+||storeedgefd.dsx.mp.microsoft.com^
+||storesdk.dsx.mp.microsoft.com^
+||displaycatalog.mp.microsoft.com^
+||manage.devcenter.microsoft.com^
+
+! OneDrive, Office, Microsoft 365, Teams, To Do - break cloud apps
+||api.onedrive.com^
+||onedrive.live.com^
+||oneclient.sfx.ms^
+||g.live.com^
+||skyapi.live.net^
+||skydrivesync.policies.live.net^
+||storage.live.com^
+||settings.live.net^
+||windows.policies.live.net^
+||office.com^
+||office365.com^
+||blobs.officehome.msocdn.com^
+||cdn.onenote.net^
+||officeapps.live.com^
+||officeclient.microsoft.com^
+||m365.cloud.microsoft^
+||config.teams.microsoft.com^
+||statics.teams.cdn.live.net^
+||statics.teams.cdn.office.net^
+||teams.live.com^
+||to-do.microsoft.com^
+
+! Xbox, Windows Maps, Microsoft Rewards and other optional features
+||xboxab.com^
+||xboxlive.com^
+||xboxservices.com^
+||prod.rewardsplatform.microsoft.com^
+||dev.virtualearth.net^
+||maps.windows.com^
+||ssl.ak.dynamic.tiles.virtualearth.net^
+||ssl.ak.tiles.virtualearth.net^
+
+! ===== 03-critical-not-recommended.txt =====
+
+! DANGER: Windows Update, Delivery Optimization, Edge Update, Defender signatures
+||windowsupdate.com^
+||update.microsoft.com^
+||download.microsoft.com^
+||delivery.mp.microsoft.com^
+||do.dsp.mp.microsoft.com^
+||emdl.ws.microsoft.com^
+||adl.windows.com^
+||tsfe.trafficshaping.dsp.mp.microsoft.com^
+||definitionupdates.microsoft.com^
+||msedge.api.cdp.microsoft.com^
+
+! DANGER: antivirus, SmartScreen, certificate status and trust
+||wdcp.microsoft.com^
+||wdcpalt.microsoft.com^
+||smartscreen-prod.microsoft.com^
+||smartscreen.microsoft.com^
+||urs.microsoft.com^
+||checkappexec.microsoft.com^
+||crl.microsoft.com^
+||ctldl.windowsupdate.com^
+
+! DANGER: account sign-in, licensing, Windows notifications, network status
+||login.live.com^
+||login.microsoftonline.com^
+||login.microsoft.com^
+||login.windows.net^
+||logincdn.msauth.net^
+||licensing.mp.microsoft.com^
+||activation-v2.sls.microsoft.com^
+||wns.windows.com^
+||msftconnecttest.com^
+
+! DANGER: Edge sync, security components and common Microsoft link routing
+||edge.microsoft.com^
+||edgepasskeysenclave.microsoft.com^
+||cloudmessaging.edge.microsoft.com^
+||go.microsoft.com^
+
+! DANGER: Store malicious app license revocation and other required cross-service endpoints
+||storecatalogrevocation.storequality.microsoft.com^
+||api.cdp.microsoft.com^

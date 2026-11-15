@@ -1,0 +1,49 @@
+! AdGuard Home Microsoft DNS rules - HIGH RISK / DO NOT USE ON PRODUCTION: Updates, Defender, authentication, licensing
+! Date: 2026-11-15
+! Source: Microsoft Windows 11 connection endpoints + Microsoft Edge endpoints
+! Format: ||domain^ blocks domain and all subdomains; comments are ignored.
+! IMPORTANT: do not load all lists unless you intentionally want the listed breakages.
+! This list is curated, not an exhaustive or dynamically updated Microsoft endpoint feed.
+
+! DANGER: Windows Update, Delivery Optimization, Edge Update, Defender signatures
+||windowsupdate.com^
+||update.microsoft.com^
+||download.microsoft.com^
+||delivery.mp.microsoft.com^
+||do.dsp.mp.microsoft.com^
+||emdl.ws.microsoft.com^
+||adl.windows.com^
+||tsfe.trafficshaping.dsp.mp.microsoft.com^
+||definitionupdates.microsoft.com^
+||msedge.api.cdp.microsoft.com^
+
+! DANGER: antivirus, SmartScreen, certificate status and trust
+||wdcp.microsoft.com^
+||wdcpalt.microsoft.com^
+||smartscreen-prod.microsoft.com^
+||smartscreen.microsoft.com^
+||urs.microsoft.com^
+||checkappexec.microsoft.com^
+||crl.microsoft.com^
+||ctldl.windowsupdate.com^
+
+! DANGER: account sign-in, licensing, Windows notifications, network status
+||login.live.com^
+||login.microsoftonline.com^
+||login.microsoft.com^
+||login.windows.net^
+||logincdn.msauth.net^
+||licensing.mp.microsoft.com^
+||activation-v2.sls.microsoft.com^
+||wns.windows.com^
+||msftconnecttest.com^
+
+! DANGER: Edge sync, security components and common Microsoft link routing
+||edge.microsoft.com^
+||edgepasskeysenclave.microsoft.com^
+||cloudmessaging.edge.microsoft.com^
+||go.microsoft.com^
+
+! DANGER: Store malicious app license revocation and other required cross-service endpoints
+||storecatalogrevocation.storequality.microsoft.com^
+||api.cdp.microsoft.com^

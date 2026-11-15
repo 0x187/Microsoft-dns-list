@@ -1,0 +1,38 @@
+! AdGuard Home Microsoft DNS rules - RECOMMENDED TEST FIRST: News, Widgets, Spotlight, telemetry
+! Date: 2026-11-15
+! Source: Microsoft Windows 11 connection endpoints + Microsoft Edge endpoints
+! Format: ||domain^ blocks domain and all subdomains; comments are ignored.
+! IMPORTANT: do not load all lists unless you intentionally want the listed breakages.
+! This list is curated, not an exhaustive or dynamically updated Microsoft endpoint feed.
+
+! News, Widgets, Windows Spotlight, weather and Microsoft Start
+||msn.com^
+||ris.api.iris.microsoft.com^
+||fd.api.iris.microsoft.com^
+||widgetcdn.azureedge.net^
+||widgetservice.azurefd.net^
+||prod-azurecdn-akamai-iris.azureedge.net^
+||fp-afd-nocache-ccp.azureedge.net^
+||edgeassetservice.azureedge.net^
+||tile-service.weather.microsoft.com^
+||c-ring.msedge.net^
+||fp.msedge.net^
+||i-ring.msedge.net^
+||s-ring.msedge.net^
+||dual-s-ring.msedge.net^
+||k-ring.msedge.net^
+||b-ring.msedge.net^
+||a-ring-fallback.msedge.net^
+
+! Windows/Office/Edge telemetry and error reports
+||events.data.microsoft.com^
+||v10.vortex-win.data.microsoft.com^
+||pipe.aria.microsoft.com^
+||telecommand.telemetry.microsoft.com^
+||watson.telemetry.microsoft.com^
+||www.telecommandsvc.microsoft.com^
+||api.diagnostics.office.com^
+||api.msa.diagnostics.office.com^
+||edge.nelreports.net^
+||ecs.nel.measure.office.net^
+||tfl.nel.measure.office.net^

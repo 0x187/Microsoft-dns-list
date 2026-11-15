@@ -1,0 +1,35 @@
+! AdGuard Home Microsoft blocklist only for campus LAN clients (if actual client source is visible)
+! client subnet: 10.10.10.0/23; safe-ish level only. Query Log must show real client IP.
+! Do not enable this alongside 01-recommended.txt unless you want it globally.
+
+! News, Widgets, Windows Spotlight, weather and Microsoft Start
+||msn.com^$client=10.10.10.0/23
+||ris.api.iris.microsoft.com^$client=10.10.10.0/23
+||fd.api.iris.microsoft.com^$client=10.10.10.0/23
+||widgetcdn.azureedge.net^$client=10.10.10.0/23
+||widgetservice.azurefd.net^$client=10.10.10.0/23
+||prod-azurecdn-akamai-iris.azureedge.net^$client=10.10.10.0/23
+||fp-afd-nocache-ccp.azureedge.net^$client=10.10.10.0/23
+||edgeassetservice.azureedge.net^$client=10.10.10.0/23
+||tile-service.weather.microsoft.com^$client=10.10.10.0/23
+||c-ring.msedge.net^$client=10.10.10.0/23
+||fp.msedge.net^$client=10.10.10.0/23
+||i-ring.msedge.net^$client=10.10.10.0/23
+||s-ring.msedge.net^$client=10.10.10.0/23
+||dual-s-ring.msedge.net^$client=10.10.10.0/23
+||k-ring.msedge.net^$client=10.10.10.0/23
+||b-ring.msedge.net^$client=10.10.10.0/23
+||a-ring-fallback.msedge.net^$client=10.10.10.0/23
+
+! Windows/Office/Edge telemetry and error reports
+||events.data.microsoft.com^$client=10.10.10.0/23
+||v10.vortex-win.data.microsoft.com^$client=10.10.10.0/23
+||pipe.aria.microsoft.com^$client=10.10.10.0/23
+||telecommand.telemetry.microsoft.com^$client=10.10.10.0/23
+||watson.telemetry.microsoft.com^$client=10.10.10.0/23
+||www.telecommandsvc.microsoft.com^$client=10.10.10.0/23
+||api.diagnostics.office.com^$client=10.10.10.0/23
+||api.msa.diagnostics.office.com^$client=10.10.10.0/23
+||edge.nelreports.net^$client=10.10.10.0/23
+||ecs.nel.measure.office.net^$client=10.10.10.0/23
+||tfl.nel.measure.office.net^$client=10.10.10.0/23
